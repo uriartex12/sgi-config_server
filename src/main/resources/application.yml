@@ -7,3 +7,6 @@ spring:
     config:
       server:
         git:
+          default-label: master
+          uri: https://github.com/uriartex12/config-data
+          search-paths: ${PROFILE}
