@@ -1,5 +1,9 @@
 server:
   port: 8888
+app:
+  name: @project.artifactId@
+  version: @project.version@
+  description: @project.description@
 spring:
   application:
     name: config-server
@@ -9,4 +13,5 @@ spring:
         git:
           default-label: master
           uri: https://github.com/uriartex12/config-data
-          search-paths: ${PROFILE}
+          search-paths: ${PROFILE:dev}
+          clone-on-start: true
